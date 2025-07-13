@@ -1,8 +1,9 @@
 .space {
   background-color: #000912;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
   position: relative;
-  height: 800px;
+  height: 100vw;
+  max-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,12 +153,12 @@
 
 @media (max-width: 900px) {
   .space {
-    height: 400px;
+    margin-bottom: 5em;
   }
-  .earth {
+  /* .earth {
     top: 100%;
-  }
+  } */
   .earth-img {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }

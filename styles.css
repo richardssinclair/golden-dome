@@ -46,7 +46,8 @@ section {
   align-items: center;
   flex-direction: column;
   background-color: gold;
-  top: 0;
+  top: unset;
+  bottom: 0%;
   /* height: 45%; */
   /* top: 40%; */
 }
@@ -117,6 +118,10 @@ section {
 .margin-bottom {
   margin-bottom: 5em;
 }
+
+/* .margin-top {
+  margin-top: 5em;
+} */
 
 .donald-title-one {
   width: 45%;
@@ -248,7 +253,7 @@ section {
   position: absolute;
   top: 30%;
   left: 0%;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
   width: 80px;
 }
 
@@ -272,6 +277,7 @@ section {
   .card-img {
     height: 45%;
     top: 40%;
+    bottom: unset;
   }
   .section {
     margin-bottom: 4em;
@@ -320,13 +326,12 @@ section {
     margin-bottom: 0;
   }
   .rocket-text {
-    /* margin-bottom: 2em; */
     margin-bottom: 4em;
   }
 
   .red-rocket-img {
     width: 50px;
-    top: 36%;
+    top: 35%;
   }
 
   .rocket-info {
