@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #000912;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  color: #fff;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  padding: 1.5em;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: gold;
+}
+
+.title {
+  font-size: 3em;
+  margin: 1em;
+  text-align: center;
+  line-height: 1;
+  z-index: 2;
+}
+
+.title.large {
+  font-size: 5em;
+}
+
+.img-fluid {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.content {
+  position: relative;
+  max-width: 1200px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.map-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: unset;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.map-one {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+}
+
+.date-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.section {
+  position: relative;
+}
+
+.margin-bottom {
+  margin-bottom: 5em;
+}
+
+.donald-title-one {
+  width: 45%;
+  right: 0;
+  position: absolute;
+  top: 15%;
+}
+
+.donald-title-two {
+  width: 45%;
+  right: 0;
+  position: absolute;
+  top: 50%;
+}
+
+.country-icons-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.country-icon {
+  width: 25%;
+}
+
+.donald {
+  overflow: hidden;
+  position: relative;
+}
+
+.donald-img {
+  width: 100%;
+}
+
+.donald-img-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.xi-missile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+.pres-xi {
+  z-index: 3;
+  position: relative;
+}
+
+.satelite-info {
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.right {
+  right: 0;
+}
+
+.globe-img {
+  width: 50%;
+}
+
+.orbit {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 600px;
+  max-width: 600px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rocket-img {
+  position: absolute;
+  width: 50px;
+  left: 0;
+  top: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+
+.rock-img {
+  width: 80px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.satalite-img {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.rocket-info {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.rocket-text {
+  margin-bottom: 2em;
+}
+
+.red-rocket-img {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  transform: translateY(-50%) rotate(90deg);
+  width: 80px;
+}
+
+.dome {
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gold;
+  border-radius: 400px 400px 50px 50px;
+  margin-bottom: 5em;
+}
+@media (max-width: 900px) {
+  .section {
+    margin-bottom: 4em;
+  }
+  .large-mb {
+    font-size: 5em;
+  }
+  .title {
+    font-size: 2em;
+    margin: 1.5em 0.5em;
+  }
+
+  .donald {
+    height: 430px;
+  }
+
+  .donald-img,
+  .donald-img-2 {
+    margin-left: 20%;
+    margin-top: 25%;
+    transform: scale(2);
+  }
+  .donald-title-one {
+    position: relative;
+    width: auto;
+  }
+
+  .donald-title-two {
+    position: relative;
+    width: auto;
+  }
+  .date-counter {
+    height: 100px;
+  }
+  .map-img {
+    transform: scale(1.5);
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .xi-missile {
+    margin-bottom: 0;
+  }
+  .rocket-text {
+    margin-bottom: 2em;
+  }
+
+  .red-rocket-img {
+    width: 50px;
+    top: 36%;
+  }
+
+  .rocket-info {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>America's Golden Dome</title>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stars.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="cards">
+      <!-- Dome that zooms in and shows image as you scroll -->
+      <div class="card">
+        <div class="card-wrapper">
+          <div class="card-img">
+            <div class="title large absolute">
+              <h1>America's<br />Golden<br />Dome</h1>
+            </div>
+            <img src="assets/dome.png" alt="Image of a dome structure" />
+          </div>
+        </div>
+      </div>
+      <!-- Regular scrolling content keep it smooth but not card based  -->
+      <div class="content">
+        <!-- Section One -->
+        <div class="section">
+          <h1 class="title donald-title-one">
+            Trump wants to build a 'golden dome' to protect America.
+          </h1>
+          <div class="donald">
+            <img
+              class="donald-img"
+              src="assets/donald-bw.png"
+              alt="Portrait of Donald Trump in black and white"
+            />
+            <img
+              class="donald-img donald-img-2"
+              src="assets/donald-gold.png"
+              alt="Portrait of Donald trump with a golden filter"
+            />
+          </div>
+          <h1 class="title donald-title-two">
+            It would be the biggest missile defence system ever, spanning x,
+            protecting y people
+          </h1>
+        </div>
+        <!-- Section Two -->
+        <!-- Map images that reveal as you scroll down -->
+        <div class="section map margin-bottom">
+          <h1 class="title">
+            He's doing it because the world is becoming more dangerous
+          </h1>
+          <div class="map-container">
+            <img
+              src="assets/world-map.png"
+              class="map-img map-one"
+              id="map-1"
+              alt="Generic world map"
+            />
+            <img
+              src="assets/world-map-china.png"
+              class="map-img"
+              id="map-2"
+              alt="Generic world map with China filled in"
+            />
+            <img
+              src="assets/world-map-russia-china.png"
+              class="map-img"
+              id="map-3"
+              alt="Generic world map with China and Russia filled in"
+            />
+          </div>
+          <h1 class="title">China and Russia are the biggest threats</h1>
+          <div class="country-icons-container">
+            <img
+              class="country-icon"
+              src="assets/china.png"
+              alt="Icon of the flag of China"
+            />
+            <img
+              class="country-icon"
+              src="assets/russia.png"
+              alt="Icon of the flag of Russia"
+            />
+          </div>
+          <h1 class="title large-mobile">
+            Any one of these could destroy a city the size of
+            <span class="city">London</span>
+          </h1>
+        </div>
+        <!-- section Three -->
+        <div class="section">
+          <div class="space">
+            <div class="stars-container">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+            </div>
+            <h1 class="title">But there are also threats from space</h1>
+            <div class="earth">
+              <img
+                class="earth-img"
+                src="assets/earth.png"
+                alt="Graphic of Earth with Golden Dome representation with shooting stars"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Section Four -->
+        <div class="section">
+          <h1 class="title">
+            Here is a hypothetical scenario where we show how it would work
+          </h1>
+
+          <div class="date-counter">
+            <h1 class="title large">
+              The year is <span id="year">2025</span>.
+            </h1>
+          </div>
+
+          <h1 class="title">China has invaded Taiwan.</h1>
+          <img
+            class="img-fluid"
+            src="assets/taiwan.png"
+            alt="Map showing China and Tiwan"
+          />
+
+          <h1 class="title">prompting US military intervention in Asia.</h1>
+          <img
+            class="img-fluid"
+            src="assets/military-intervention.jpg"
+            alt="Image of US soldiers intervention"
+          />
+
+          <h1 class="title">
+            President Xi does the unthinkable, launching a missile at Los
+            Angeles
+          </h1>
+
+          <div class="xi-missile">
+            <img
+              class="img-fluid absolute right"
+              src="assets/missile GIF.gif"
+              alt="A video graphic of a missile firing"
+            />
+            <img
+              class="img-fluid pres-xi"
+              src="assets/pres-xi.png"
+              alt="Image of President Xi with a red filter"
+            />
+          </div>
+          <div class="rocket-info">
+            <img
+              class="red-rocket-img"
+              src="assets/red-rocket.png"
+              alt="Graphic of a red missile"
+            />
+            <h1 class="title rocket-text">
+              The missile, travelling at xxxmph, will reach LA in x hours
+            </h1>
+            <h1 class="title">
+              Satellites alert the golden dome to the imminent threat
+            </h1>
+          </div>
+          <div class="satelite-info">
+            <img
+              class="globe-img"
+              src="assets/gold-globe.png"
+              alt="Graphic of the globe with golden dome represented"
+            />
+            <div class="orbit">
+              <div class="rocket"></div>
+              <img
+                class="rocket-img"
+                src="assets/red-rocket.png"
+                alt="Graphic of a red rocket"
+              />
+              <img
+                class="rock-img"
+                src="assets/meteor.png"
+                alt="Graphic of a red meteor"
+              />
+              <img
+                class="satalite-img"
+                src="assets/satelite.png"
+                alt="Graphic of a satelite"
+              />
+            </div>
+          </div>
+          <div class="section">
+            <h1 class="title">
+              A silo of missiles destroys the oncoming threat
+            </h1>
+            <img
+              class="img-fluid"
+              src="assets/silo.gif"
+              alt="Video graphic of a silo of missiles firing"
+            />
+            <h1 class="title">Polling shows xx% Americans want it</h1>
+
+            <h1 class="title">But the problem is cost</h1>
+            <img
+              class="img-fluid"
+              src="assets/money GIF.gif"
+              alt="Video graphic of money counting machine counting money"
+            />
+            <h1 class="title">A golden dome would cost $xxxbn</h1>
+          </div>
+        </div>
+        <div class="section">
+          <div class="dome">
+            <h1 class="title">Is it worth it?</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
