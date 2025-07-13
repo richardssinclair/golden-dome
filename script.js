@@ -38,14 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
     onUpdate: (self) => {
       const progress = self.progress;
       const imgScale = 0.5 + progress * 0.5;
-      const borderRadius = 400 - progress * 375;
+      const borderRadius = 600 - progress * 375;
       const innerImgScale = 1.5 - progress * 0.5;
+      const marginTop = 50 - progress * 30; // From 50% to 20%
 
       gsap.set(cardImageWrapper, {
         scale: imgScale,
         borderRadius: `${borderRadius}px ${borderRadius}px 50px 50px`,
       });
-      gsap.set(cardImg, { scale: innerImgScale });
+
+      gsap.set(cardImg, {
+        scale: innerImgScale,
+        marginTop: `${marginTop}%`,
+      });
     },
   });
 
@@ -108,6 +113,25 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // changing rocket speed text
+  let speedObj = { val: "000" };
+  const speedDisplay = document.getElementById("speed");
+
+  gsap.to(speedObj, {
+    val: 999,
+    duration: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".rocket-info",
+      start: "top 80%",
+      end: "bottom 20%",
+      scrub: true,
+    },
+    onUpdate: () => {
+      speedDisplay.textContent = Math.floor(speedObj.val);
+    },
+  });
+
   // rocket flying from left to right
   gsap.to(".red-rocket-img", {
     x: "100vw",
@@ -117,6 +141,61 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top bottom",
       end: "bottom top",
       scrub: true,
+    },
+  });
+  // Billions and billions
+  gsap.registerPlugin(TextPlugin);
+
+  const billionsEl = document.querySelector(".billions");
+
+  function animateBillions() {
+    gsap.to(billionsEl, {
+      duration: 2,
+      text: "billions & billions..",
+      ease: "none",
+      onComplete: () => {
+        gsap.to(billionsEl, {
+          duration: 0.5,
+          text: "", // reset
+          onComplete: animateBillions,
+        });
+      },
+    });
+  }
+
+  animateBillions();
+
+  // Bottom Dome animation
+
+  const dome = document.querySelector(".dome");
+  const domeTitle = dome.querySelector(".title");
+
+  gsap.set(dome, {
+    scale: 1,
+    borderRadius: "50px 50px 400px 400px",
+  });
+
+  ScrollTrigger.create({
+    trigger: dome,
+    start: "top 70%",
+    end: "bottom 80%",
+    scrub: true,
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const scale = 1 - progress * 0.5; // shrink from 1 to 0.5
+      const borderRadius = 400 - progress * 375; // rounder to flatter
+
+      gsap.set(dome, {
+        scale: scale,
+        borderRadius: `${50 + progress * 350}px ${
+          50 + progress * 350
+        }px ${borderRadius}px ${borderRadius}px`,
+      });
+
+      gsap.set(domeTitle, {
+        yPercent: progress * 50,
+        opacity: 1 - progress,
+      });
     },
   });
 });

@@ -48,10 +48,13 @@ section {
   background-color: gold;
   top: unset;
   bottom: 0%;
+  /* border-radius: 600px 600px 50px 50px; */
   /* height: 45%; */
   /* top: 40%; */
 }
-
+.intro-image {
+  margin-top: 50%;
+}
 .title {
   font-size: 3em;
   margin: 1em;
@@ -270,6 +273,14 @@ section {
   border-radius: 400px 400px 50px 50px;
   margin-bottom: 5em;
 }
+
+.outro {
+  height: 55vh;
+}
+
+.cost-text {
+  height: 100px;
+}
 @media (max-width: 900px) {
   .card {
     height: 100svh;
@@ -288,6 +299,11 @@ section {
   .title {
     font-size: 2em;
     margin: 1.5em 0.5em;
+  }
+
+  .intro-image {
+    width: 100%;
+    margin-top: 50%;
   }
 
   .donald {
@@ -337,4 +353,8 @@ section {
   .rocket-info {
     margin-bottom: 0;
   }
+
+  .outro {
+  height: 45vh;
+}
 }

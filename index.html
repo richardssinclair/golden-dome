@@ -6,6 +6,7 @@
     <title>America's Golden Dome</title>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/TextPlugin.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +26,12 @@
             <div class="title large absolute">
               <h1>America's<br />Golden<br />Dome</h1>
             </div>
-            <img src="assets/dome.png" alt="Image of a dome structure" />
+            <!-- <img src="assets/dome.png" alt="Image of a dome structure" /> -->
+            <img
+              class="intro-image"
+              src="assets/globe-dome.png"
+              alt="Image of a dome structure"
+            />
           </div>
         </div>
       </div>
@@ -172,7 +178,8 @@
               alt="Graphic of a red missile"
             />
             <h1 class="title rocket-text">
-              The missile, travelling at xxxmph, will reach LA in x hours
+              The missile, travelling at <span id="speed">000</span>mph, will
+              reach LA in x hours
             </h1>
             <h1 class="title">
               Satellites alert the golden dome to the imminent threat
@@ -220,10 +227,12 @@
               src="assets/money GIF.gif"
               alt="Video graphic of money counting machine counting money"
             />
-            <h1 class="title">A golden dome would cost $xxxbn</h1>
+            <h1 class="title cost-text">
+              A golden dome would cost <span class="billions">billions & billions...</span>
+            </h1>
           </div>
         </div>
-        <div class="section">
+        <div class="section outro">
           <div class="dome">
             <h1 class="title">Is it worth it?</h1>
           </div>
