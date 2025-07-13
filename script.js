@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrub: true,
     onUpdate: (self) => {
       const progress = self.progress;
-      const scale = 1 - progress * 0.5; // shrink from 1 to 0.5
+      const scale = 1 - progress * 0.2; // shrink from 1 to 0.5
       const borderRadius = 400 - progress * 375; // rounder to flatter
 
       gsap.set(dome, {
@@ -190,11 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
         borderRadius: `${50 + progress * 350}px ${
           50 + progress * 350
         }px ${borderRadius}px ${borderRadius}px`,
-      });
-
-      gsap.set(domeTitle, {
-        yPercent: progress * 50,
-        opacity: 1 - progress,
       });
     },
   });
