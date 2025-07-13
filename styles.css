@@ -24,7 +24,7 @@ section {
 .card {
   position: relative;
   width: 100vw;
-  height: 100svh;
+  height: 130svh;
   padding: 1.5em;
 }
 
@@ -46,6 +46,9 @@ section {
   align-items: center;
   flex-direction: column;
   background-color: gold;
+  top: 0;
+  /* height: 45%; */
+  /* top: 40%; */
 }
 
 .title {
@@ -263,6 +266,13 @@ section {
   margin-bottom: 5em;
 }
 @media (max-width: 900px) {
+  .card {
+    height: 100svh;
+  }
+  .card-img {
+    height: 45%;
+    top: 40%;
+  }
   .section {
     margin-bottom: 4em;
   }
@@ -310,7 +320,8 @@ section {
     margin-bottom: 0;
   }
   .rocket-text {
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
+    margin-bottom: 4em;
   }
 
   .red-rocket-img {
