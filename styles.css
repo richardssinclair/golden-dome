@@ -260,7 +260,7 @@ section {
 
 .red-rocket-img {
   position: absolute;
-  top: 30%;
+  top: -50%;
   left: 0%;
   transform: translate(-50%, -50%) rotate(90deg);
   width: 80px;
@@ -279,7 +279,10 @@ section {
   border-radius: 400px 400px 50px 50px;
   margin-bottom: 5em;
 }
-
+.rocket-path {
+  position: relative;
+  height: 80px;
+}
 .outro {
   height: 65vh;
 }
@@ -347,13 +350,12 @@ section {
   .xi-missile {
     margin-bottom: 0;
   }
-  .rocket-text {
-    margin-bottom: 4em;
-  }
+  /* .rocket-text {
+    margin-bottom: 3em;
+  } */
 
   .red-rocket-img {
     width: 50px;
-    top: 35%;
   }
 
   .rocket-info {
@@ -367,5 +369,9 @@ section {
 
   .outro {
     height: 45vh;
+  }
+
+  .rocket-path {
+    margin-bottom: -10%;
   }
 }
